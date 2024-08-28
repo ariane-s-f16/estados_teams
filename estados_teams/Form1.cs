@@ -9,15 +9,58 @@ namespace estados_teams
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedIndex != -1)
+            if (cboEstados.SelectedIndex != -1)
             {
-                comboBox1.Items.RemoveAt(comboBox1.SelectedIndex);
+                string estado = cboEstados.SelectedItem.ToString();
+                //norte
+                if (estado == "acre" || estado == "Amazonas" || estado == "pará" ||
+                    estado == "roraima" || estado == "rondônia" || estado == "tocantins" ||
+                    estado == "amapá")
+                {
 
-                txttotal.Text = comboBox1.Items.Count.ToString();
+                    combobox1.Items.Add(cboEstados.SelectedItem);
+                    cboEstados.Items.RemoveAt(cboEstados.SelectedIndex);
+                    countEstados.Text = cboEstados.Items.Count.ToString();
+                    countNorte.Text = cboNorte.Items.Count.ToString();
+                }
+                //nordeste
+                if (estado == "Alagoas" || estado == "Bahia" || estado == "Ceará" ||
+                     estado == "Maranhão" || estado == "Paraíba" || estado == "Pernambuco" ||
+                     estado == "Piauí" || estado == "Rio Grande do Norte")
+                {
+                    cboNordeste.Items.Add(cboEstados.SelectedItem);
+                    cboEstados.Items.Remove(cboEstados.SelectedItem);
+                    countEstados.Text = cboEstados.Items.Count.ToString();
+                    countNordeste.Text = cboNordeste.Items.Count.ToString();
+                }
+                // CEntro Oeste 
+                if (estado == "Distrito Federal" || estado == "Goiás" ||
+         estado == "Mato Grosso" || estado == "Mato Grosso do Sul")
+                {
+                    cboCentro.Items.Add(cboEstados.SelectedItem);
+                    cboEstados.Items.Remove(cboEstados.SelectedItem);
+                    countEstados.Text = cboEstados.Items.Count.ToString();
+                    CountCentro.Text = cboCentro.Items.Count.ToString();
+                }
 
-                comboBox1.ResetText();
-
-
+                //sudeste
+                if (estado == "Espírito Santo" || estado == "Minas Gerais" ||
+         estado == "Rio de Janeiro" || estado == "São Paulo")
+                {
+                    cboSudeste.Items.Add(cboEstados.SelectedItem);
+                    cboEstados.Items.Remove(cboEstados.SelectedItem);
+                    countEstados.Text = cboEstados.Items.Count.ToString();
+                    countSudeste.Text = cboSudeste.Items.Count.ToString();
+                }
+                //Sul
+                if (estado == "Paraná" || estado == "Santa Catarina" ||
+         estado == "Rio Grande do Sul")
+                {
+                    cboSul.Items.Add(cboEstados.SelectedItem);
+                    cboEstados.Items.Remove(cboEstados.SelectedItem);
+                    countEstados.Text = cboEstados.Items.Count.ToString();
+                    countSul.Text = cboSul.Items.Count.ToString();
+                }
             }
         }
 
