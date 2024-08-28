@@ -11,127 +11,115 @@ namespace estados_teams
         {
             if (cboEstados.SelectedIndex != -1)
             {
-                string estado = cboEstados.SelectedItem.ToString();
-                //norte
-                if (estado == "acre" || estado == "Amazonas" || estado == "pará" ||
-                    estado == "roraima" || estado == "rondônia" || estado == "tocantins" ||
-                    estado == "amapá")
+                string estado = comboBox1.SelectedItem.ToString();
+
+
+                // comboBox2= norte; comboBox1= total
+                if (estado == "Acre" || estado == "Amazonas" || estado == "Pará" ||
+                    estado == "Roraima" || estado == "Rondônia" || estado == "Tocantins" ||
+                    estado == "Amapá")
                 {
 
-                    combobox1.Items.Add(cboEstados.SelectedItem);
-                    cboEstados.Items.RemoveAt(cboEstados.SelectedIndex);
-                    countEstados.Text = cboEstados.Items.Count.ToString();
-                    countNorte.Text = cboNorte.Items.Count.ToString();
+                    comboBox2.Items.Add(comboBox1.SelectedItem);
+                    comboBox1.Items.RemoveAt(comboBox1.SelectedIndex);
+                    counttotal.Text = comboBox1.Items.Count.ToString();
+                    counttxtnorte.Text = comboBox2.Items.Count.ToString();
                 }
-                //nordeste
+
+
+                // comboBox3= Nordeste; comboBox1= total
                 if (estado == "Alagoas" || estado == "Bahia" || estado == "Ceará" ||
                      estado == "Maranhão" || estado == "Paraíba" || estado == "Pernambuco" ||
                      estado == "Piauí" || estado == "Rio Grande do Norte")
                 {
-                    cboNordeste.Items.Add(cboEstados.SelectedItem);
-                    cboEstados.Items.Remove(cboEstados.SelectedItem);
-                    countEstados.Text = cboEstados.Items.Count.ToString();
-                    countNordeste.Text = cboNordeste.Items.Count.ToString();
+                    comboBox3.Items.Add(comboBox1.SelectedItem);
+                    comboBox1.Items.Remove(comboBox1.SelectedItem);
+                    counttotal.Text = comboBox1.Items.Count.ToString();
+                    counttxtnordeste.Text = comboBox3.Items.Count.ToString();
                 }
-                // CEntro Oeste 
+
+
+
+               //comboBox4= centro oeste; comboBox1= total
+
                 if (estado == "Distrito Federal" || estado == "Goiás" ||
          estado == "Mato Grosso" || estado == "Mato Grosso do Sul")
                 {
-                    cboCentro.Items.Add(cboEstados.SelectedItem);
-                    cboEstados.Items.Remove(cboEstados.SelectedItem);
-                    countEstados.Text = cboEstados.Items.Count.ToString();
-                    CountCentro.Text = cboCentro.Items.Count.ToString();
+                    ComboBox4.Items.Add(comboBox1.SelectedItem);
+                    comboBox1.Items.Remove(comboBox1.SelectedItem);
+                    counttotal.Text = comboBox1.Items.Count.ToString();
+                    counttxtcentro.Text = comboBox4.Items.Count.ToString();
                 }
 
-                //sudeste
+
+
+
+                //comboBox5= sudeste; comboBox1= total
                 if (estado == "Espírito Santo" || estado == "Minas Gerais" ||
          estado == "Rio de Janeiro" || estado == "São Paulo")
                 {
-                    cboSudeste.Items.Add(cboEstados.SelectedItem);
-                    cboEstados.Items.Remove(cboEstados.SelectedItem);
-                    countEstados.Text = cboEstados.Items.Count.ToString();
-                    countSudeste.Text = cboSudeste.Items.Count.ToString();
+                    comboBox5.Items.Add(comboBox1.SelectedItem);
+                    comboBox1.Items.Remove(comboBox1.SelectedItem);
+                    counttotal.Text = cboEstados.Items.Count.ToString();
+                    counttxtsudeste.Text = comboBox5.Items.Count.ToString();
                 }
-                //Sul
+
+                
+                //comboBox6= sul; comboBox1= total
                 if (estado == "Paraná" || estado == "Santa Catarina" ||
          estado == "Rio Grande do Sul")
                 {
-                    cboSul.Items.Add(cboEstados.SelectedItem);
-                    cboEstados.Items.Remove(cboEstados.SelectedItem);
-                    countEstados.Text = cboEstados.Items.Count.ToString();
-                    countSul.Text = cboSul.Items.Count.ToString();
+                    comboBox6.Items.Add(comboBox1.SelectedItem);
+                    comboBox1.Items.Remove(comboBox1.SelectedItem);
+                    counttotal.Text = comboBox1.Items.Count.ToString();
+                    counttxtsul.Text = comboBox6.Items.Count.ToString();
                 }
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (comboBox2.SelectedIndex != -1)
+        
+            if(comboBox2.SelectedIndex != -1)
             {
-                comboBox2.Items.RemoveAt(comboBox2.SelectedIndex);
-
-                txtnorte.Text = comboBox2.Items.Count.ToString();
-
+                comboBox1.Items.Add(comboBox1.SelectedItem);
+                comboBox2.Items.Remove(comboBox2.SelectedItem);
+                counttotal.Text = comboBox1.Items.Count.ToString();
+                counttxtnorte.Text = comboBox2.Items.Count.ToString();
+                
                 comboBox2.ResetText();
-
-
             }
+
 
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            
             if (comboBox3.SelectedIndex != -1)
             {
-                comboBox3.Items.RemoveAt(comboBox3.SelectedIndex);
-
-                txtnordeste.Text = comboBox3.Items.Count.ToString();
-
+                comboBox1.Items.Add(comboBox1.SelectedItem);
+                comboBox3.Items.Remove(comboBox3.SelectedItem);
+                counttotal.Text = comboBox1.Items.Count.ToString();
+                counttxtnordeste.Text = comboBox3.Items.Count.ToString();
+                
                 comboBox3.ResetText();
-
-
             }
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (comboBox4.SelectedIndex != -1)
-            {
-                comboBox4.Items.RemoveAt(comboBox4.SelectedIndex);
-
-                txtcentro.Text = comboBox4.Items.Count.ToString();
-
-                comboBox4.ResetText();
-
-
-            }
+            
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            if (comboBox5.SelectedIndex != -1)
-            {
-                comboBox5.Items.RemoveAt(comboBox5.SelectedIndex);
-
-                txtsudeste.Text = comboBox5.Items.Count.ToString();
-
-                comboBox5.ResetText();
-
-            }
+            
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            if (comboBox6.SelectedIndex != -1)
-            {
-                comboBox6.Items.RemoveAt(comboBox6.SelectedIndex);
-
-                txtsul.Text = comboBox6.Items.Count.ToString();
-
-                comboBox6.ResetText();
-
-
-            }
+            
         }
     }
 }
