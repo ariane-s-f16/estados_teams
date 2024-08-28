@@ -22,8 +22,10 @@ namespace estados_teams
 
                     comboBox2.Items.Add(comboBox1.SelectedItem);
                     comboBox1.Items.RemoveAt(comboBox1.SelectedIndex);
-                    counttotal.Text = comboBox1.Items.Count.ToString();
-                    counttxtnorte.Text = comboBox2.Items.Count.ToString();
+                    
+                    total.Text = comboBox1.Items.Count.ToString();
+                    
+                    txtnorte.Text = comboBox2.Items.Count.ToString();
                 }
 
 
@@ -34,8 +36,10 @@ namespace estados_teams
                 {
                     comboBox3.Items.Add(comboBox1.SelectedItem);
                     comboBox1.Items.Remove(comboBox1.SelectedItem);
-                    counttotal.Text = comboBox1.Items.Count.ToString();
-                    counttxtnordeste.Text = comboBox3.Items.Count.ToString();
+                    
+                    total.Text = comboBox1.Items.Count.ToString();
+                    
+                    txtnordeste.Text = comboBox3.Items.Count.ToString();
                 }
 
 
@@ -47,8 +51,10 @@ namespace estados_teams
                 {
                     ComboBox4.Items.Add(comboBox1.SelectedItem);
                     comboBox1.Items.Remove(comboBox1.SelectedItem);
-                    counttotal.Text = comboBox1.Items.Count.ToString();
-                    counttxtcentro.Text = comboBox4.Items.Count.ToString();
+                    
+                    total.Text = comboBox1.Items.Count.ToString();
+                    
+                    txtcentro.Text = comboBox4.Items.Count.ToString();
                 }
 
 
@@ -60,8 +66,10 @@ namespace estados_teams
                 {
                     comboBox5.Items.Add(comboBox1.SelectedItem);
                     comboBox1.Items.Remove(comboBox1.SelectedItem);
-                    counttotal.Text = cboEstados.Items.Count.ToString();
-                    counttxtsudeste.Text = comboBox5.Items.Count.ToString();
+                    
+                    total.Text = cboEstados.Items.Count.ToString();
+                    
+                    txtsudeste.Text = comboBox5.Items.Count.ToString();
                 }
 
                 
@@ -71,8 +79,10 @@ namespace estados_teams
                 {
                     comboBox6.Items.Add(comboBox1.SelectedItem);
                     comboBox1.Items.Remove(comboBox1.SelectedItem);
-                    counttotal.Text = comboBox1.Items.Count.ToString();
-                    counttxtsul.Text = comboBox6.Items.Count.ToString();
+                    
+                    total.Text = comboBox1.Items.Count.ToString();
+                    
+                    txtsul.Text = comboBox6.Items.Count.ToString();
                 }
             }
         }
@@ -84,8 +94,10 @@ namespace estados_teams
             {
                 comboBox1.Items.Add(comboBox1.SelectedItem);
                 comboBox2.Items.Remove(comboBox2.SelectedItem);
-                counttotal.Text = comboBox1.Items.Count.ToString();
-                counttxtnorte.Text = comboBox2.Items.Count.ToString();
+                
+                total.Text = comboBox1.Items.Count.ToString();
+                
+                txtnorte.Text = comboBox2.Items.Count.ToString();
                 
                 comboBox2.ResetText();
             }
@@ -100,8 +112,10 @@ namespace estados_teams
             {
                 comboBox1.Items.Add(comboBox1.SelectedItem);
                 comboBox3.Items.Remove(comboBox3.SelectedItem);
-                counttotal.Text = comboBox1.Items.Count.ToString();
-                counttxtnordeste.Text = comboBox3.Items.Count.ToString();
+                
+                total.Text = comboBox1.Items.Count.ToString();
+                
+                txtnordeste.Text = comboBox3.Items.Count.ToString();
                 
                 comboBox3.ResetText();
             }
@@ -113,8 +127,10 @@ namespace estados_teams
             {
                 comboBox1.Items.Add(comboBox1.SelectedItem);
                 comboBox4.Items.Remove(comboBox4.SelectedItem);
-                counttotal.Text = comboBox1.Items.Count.ToString();
-                counttxtcentro.Text = comboBox4.Items.Count.ToString();
+                
+                total.Text = comboBox1.Items.Count.ToString();
+                
+                txtcentro.Text = comboBox4.Items.Count.ToString();
                 
                 comboBox4.ResetText();
             }
@@ -127,8 +143,10 @@ namespace estados_teams
             {
                 comboBox1.Items.Add(comboBox1.SelectedItem);
                 comboBox5.Items.Remove(comboBox5.SelectedItem);
-                counttotal.Text = comboBox1.Items.Count.ToString();
-                counttxtsudeste.Text = comboBox5.Items.Count.ToString();
+                
+                total.Text = comboBox1.Items.Count.ToString();
+                
+                txtsudeste.Text = comboBox5.Items.Count.ToString();
                 
                 comboBox3.ResetText();
             }
@@ -141,8 +159,10 @@ namespace estados_teams
             {
                 comboBox1.Items.Add(comboBox1.SelectedItem);
                 comboBox6.Items.Remove(comboBox6.SelectedItem);
-                counttotal.Text = comboBox1.Items.Count.ToString();
-                counttxtsul.Text = comboBox6.Items.Count.ToString();
+                
+                total.Text = comboBox1.Items.Count.ToString();
+                
+                txtsul.Text = comboBox6.Items.Count.ToString();
                 
                 comboBox6.ResetText();
             }
